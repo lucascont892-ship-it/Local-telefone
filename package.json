@@ -1,0 +1,9 @@
+{
+  "name": "local-telefone",
+  "version": "1.0.0",
+  "description": "Chat de vídeo aleatório 1 para 1 com opção de transmitir um arquivo de vídeo próprio",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "ws": "^8.18.0" },
+  "license": "MIT"
+}

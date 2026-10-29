@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Telefone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Local Telefone</h1>
+    <span id="status">Conectando...</span>
+  </header>
+
+  <main>
+    <section class="videos">
+      <div class="caixa">
+        <video id="remoto" autoplay playsinline></video>
+        <span id="seloRemoto" class="selo" hidden>Transmitindo arquivo de vídeo</span>
+        <span class="rotulo">Parceiro</span>
+      </div>
+      <div class="caixa pequena">
+        <video id="local" autoplay playsinline muted></video>
+        <span class="rotulo">Você</span>
+      </div>
+    </section>
+
+    <section class="painel">
+      <div class="controles">
+        <button id="btnIniciar" class="primario">Iniciar</button>
+        <button id="btnProximo" disabled>Próximo</button>
+        <button id="btnParar" disabled>Parar</button>
+      </div>
+
+      <div class="fonte">
+        <strong>Fonte do vídeo</strong>
+        <label><input type="radio" name="fonte" value="camera" checked> Câmera</label>
+        <label><input type="radio" name="fonte" value="arquivo"> Arquivo de vídeo</label>
+        <input type="file" id="arquivo" accept="video/*" hidden>
+        <button id="btnArquivo" hidden>Escolher arquivo</button>
+        <small>Quando a fonte é um arquivo, o parceiro vê o aviso "Transmitindo arquivo de vídeo".</small>
+      </div>
+
+      <div class="chat">
+        <div id="mensagens"></div>
+        <form id="formChat">
+          <input id="textoChat" placeholder="Digite uma mensagem" autocomplete="off" disabled>
+          <button disabled id="btnEnviar">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <video id="origemArquivo" playsinline loop hidden></video>
+  <script src="app.js"></script>
+</body>
+</html>
